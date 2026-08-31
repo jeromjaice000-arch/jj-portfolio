@@ -1,17 +1,16 @@
 import React from 'react';
-import Hero from '../components/sections/Hero';
-import Skills from '../components/sections/Skills';
-import Projects from '../components/sections/Projects';
-import Contact from '../components/sections/Contact';
-import Experience from '../components/sections/Experience';
-export default function Page() {
+import { Hero } from '@/components/sections/Hero';
+import { Skills } from '@/components/sections/Skills';
+import { Projects } from '@/components/sections/Projects';
+import { Contact } from '@/components/sections/Contact';
+
+export default function Home() {
   return (
-    <div className="flex flex-col gap-0">
+    <main className="min-h-screen bg-dark-950 text-slate-100">
       <Hero />
       <Skills />
-      <Experience />
       <Projects />
       <Contact />
-    </div>
+    </main>
   );
 }
