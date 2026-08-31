@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { EXPERIENCE } from '@/constants';
 import { SectionHeading } from '@/components/shared/SectionHeading';
 import { Card } from '@/components/ui/Card';
+import { cn } from '@/lib/utils';
 
 export const Experience = () => {
   const { scrollYProgress } = useScroll();
@@ -61,7 +62,7 @@ export const Experience = () => {
                   </Card>
                 </div>
                 <div className="hidden md:block w-5/12" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -69,5 +70,3 @@ export const Experience = () => {
     </section>
   );
 };
-
-import { cn } from '@/lib/utils';
