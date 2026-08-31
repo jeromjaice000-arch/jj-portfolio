@@ -45,7 +45,7 @@ export const Projects = () => {
 
                 <div className="mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
                   <Button
-                    variant="ghost"
+                    variant="outline"
                     size="sm"
                     className="flex items-center gap-2 text-xs"
                     href={project.githubLink}
