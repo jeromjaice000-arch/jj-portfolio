@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   children: React.ReactNode;
@@ -21,6 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
     primary: 'bg-blue-600 hover:bg-blue-700 text-white',
     secondary: 'bg-slate-800 hover:bg-slate-700 text-slate-100',
     outline: 'border border-slate-700 hover:bg-slate-800 text-slate-300',
+    ghost: 'bg-transparent hover:bg-slate-800 text-slate-300 hover:text-white',
   }[variant];
 
   const sizeStyles = {
@@ -33,7 +34,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} className={combinedClasses}>
+      <a href={href} className={combinedClasses} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
